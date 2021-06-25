@@ -36,6 +36,7 @@ const Formulario = ({crearCita}) => {
             //console.log("Hay un error")
             actualizarError(true)
             return;
+            
         }
 
         // Eliminar el mensaje previo
