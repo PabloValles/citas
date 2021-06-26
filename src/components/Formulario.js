@@ -35,8 +35,7 @@ const Formulario = ({crearCita}) => {
         if(mascota.trim() === "" || propietario.trim() === "" || fecha.trim() === "" || hora.trim() === "" || sintomas.trim() === "" ){
             //console.log("Hay un error")
             actualizarError(true)
-            return;
-            
+            return;           
         }
 
         // Eliminar el mensaje previo
