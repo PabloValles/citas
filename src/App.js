@@ -7,7 +7,6 @@ function App() {
   // Citas en local storage
   /* Importante: Local Storage solo almacena Strings */
   let citasIniciales = JSON.parse(localStorage.getItem('citas'))
-
   if(!citasIniciales){
     citasIniciales = []
   }
@@ -17,13 +16,14 @@ function App() {
 
   // Use Effect para realizar ciertas operaciones cuando el state cambia (el useEffect siempre es un arrowFunction)
   useEffect(() =>{
+    
+    let citasIniciales = JSON.parse(localStorage.getItem('citas'))
+    
     if(citasIniciales){
       localStorage.setItem('citas', JSON.stringify(citas))
     } else{
       localStorage.setItem('citas', JSON.stringify([]))
     }
-
-    console.log('Documento listo o algo paso con las citas');
   }, [citas]) //en este caso al pasarle citas como dependencia, va a estar atento a cdo cambie el state citas
 
 
